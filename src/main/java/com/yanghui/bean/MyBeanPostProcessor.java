@@ -14,31 +14,17 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MyBeanPostProcessor implements BeanPostProcessor{
-	
-	public MyBeanPostProcessor() {
-		System.out.println("MyBeanPostProcessor...Constructor....");
-	}
-	
-	@PostConstruct
-	public void init(){
-		System.out.println("MyBeanPostProcessor...init...");
-	}
-	
-	@PreDestroy
-	public void destory(){
-		System.out.println("MyBeanPostProcessor...destory...");
-	}
 
-	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 		// TODO Auto-generated method stub
-		return null;
+		System.out.println("postProcessBeforeInitialization..."+beanName+" => "+bean);
+		return bean;
 	}
 
-	@Override
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 		// TODO Auto-generated method stub
-		return null;
+		System.out.println("postProcessAfterInitialization..."+beanName+" => "+bean);
+		return bean;
 	}
 
 }
