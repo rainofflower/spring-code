@@ -14,7 +14,6 @@ public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
 	 * BeanDefinitionRegistry:BeanDefinition注册类（bean定义注册）
 	 * BeanDefinitionRegistry.registerBeanDefinition()方法手动往容器中注册bean
 	 */
-	@Override
 	public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
 		// TODO Auto-generated method stub
 		boolean personDefinition = registry.containsBeanDefinition("com.yanghui.bean.Person");

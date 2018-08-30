@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Cat implements InitializingBean,DisposableBean{
 
 	public Cat() {
-		System.out.println("Cat ... Construtor...");
+		System.out.println("Cat ... Constructor...");
 	}
 
 	public void destroy() throws Exception {
