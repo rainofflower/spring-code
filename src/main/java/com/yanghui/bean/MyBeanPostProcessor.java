@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @author YangHui
  *
  */
-@Component
+//@Component
 public class MyBeanPostProcessor implements BeanPostProcessor{
 
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
