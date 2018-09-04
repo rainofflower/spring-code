@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
  *
  *	@Aspect:告诉spring当前类是切面类
  */
-@Component
 @Aspect
 public class LogAspect {
 

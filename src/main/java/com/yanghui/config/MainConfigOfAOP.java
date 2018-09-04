@@ -1,9 +1,13 @@
 package com.yanghui.config;
 
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+import com.yanghui.aop.LogAspect;
+import com.yanghui.aop.MathCalculator;
 
 /**
  * 
@@ -41,5 +45,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan("com.yanghui.aop")
 public class MainConfigOfAOP {
 
+	@Bean
+	public MathCalculator mathCalculator() {
+		return new MathCalculator();
+	}
+	
+	@Bean
+	public LogAspect logAspect() {
+		return new LogAspect();
+	}
 	
 }
